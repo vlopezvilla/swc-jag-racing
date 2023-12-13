@@ -9,11 +9,6 @@ HOME PAGE
     #desktop-nav{
         display: none;
     }
-    /*
-    #hamburger-nav{
-        display: flex;
-    }
-    */
 }
 
 /* The more information columns */
@@ -29,9 +24,23 @@ HOME PAGE
       }
   }
 
-
-  @media screen and (max-width: 1100px)
+@media screen and (max-width: 650px)
 {
+  #intro p{
+    padding: 0rem 1em 0rem 0rem;
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1100px)
+{
+
+  #intro h4
+  {
+    position: relative;
+    font-size: 50px;
+    padding: 0rem 50px 0rem;
+  }
   .hamburger,
   .toggle-menu{
     display: block;
@@ -63,11 +72,14 @@ HOME PAGE
   .nav__links a:hover{ 
     padding: 30px;
     font-size: 24px;
-    /* box-shadow: 0 0.2px 0 rgba(255,255,255,255) inset; */
-
+    box-shadow: 0 0.2px 0 rgba(255,255,255,255) inset;
   }
 
   .btn {
     display: none;
   }
+
+  #about p {
+    padding: 20px;
+  };
 }

@@ -185,15 +185,17 @@ nav {
     font-size: 50px;
     padding: 0rem 210px 0rem; /* Adjust right padding to shift the text to the right */
     font-weight: 600px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 #intro p {
     color: var(--white);
-    font-size: 1.5rem;
-    text-align: right; /* Adjust as needed based on your preference */
+    font-size: 24px;
+    text-align: right;
     position: relative;
     padding: 0rem 3.5rem 0rem 0rem;
     font-style: italic;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* About Section */
@@ -215,29 +217,26 @@ nav {
     margin: 10px auto; /* Adjust the margin to center the underline */
 }
 
-.section-container 
-{
+.section-container {
     display: flex;
     align-items: center;
     justify-content: center; /* Center both elements horizontally */
 }
 
-.sae-picture 
-{
+.sae-picture {
     width: 300px;
     height: auto;
     margin-right: 20px; /* Add margin to create space between image and text */
-    order: 1; /* Set the order to 1 for the image */
+    order: 1; 
     padding: 1.5rem;
     margin-top: 15px;
     margin-left: 20px;
 }
 
-#about p 
-{
-    color: var(--text-dark); /* Set paragraph text color */
-    font-size: 17px; /* Set font size */
-    margin-top: 10px; /* Adjust margin as needed */
+#about p {
+    color: var(--text-dark);
+    font-size: 17px; 
+    margin-top: 10px; 
     font-family: 'Inter', sans-serif;
     line-height: 1.5;
     flex: 1;
@@ -321,7 +320,7 @@ footer p {
     margin: 0;
 }
 
-  /******hamburger menu revised ****/
+/* HAMBURGER MENU */
 
 .hamburger{
   position: relative; 
@@ -389,46 +388,4 @@ footer p {
 
 .navigation input:checked ~.nav__links{
   right: 0px;
-}
-
-@media screen and (max-width: 1100px)
-{
-  .hamburger,
-  .toggle-menu{
-    display: block;
-  }
-
-  .hamburger{
-    z-index: 5;
-  }
-  .nav__links{
-    z-index: 4;
-    justify-content: start;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    right: -300px;
-    background: var(--secondary-color);
-    width: 300px;
-    height: 100%;
-    padding: 65px;
-  }
-
-  .nav__links li
-  {
-    width: 100%;
-  }
-
-  .nav__links a
-  .nav__links a:hover{ 
-    padding: 30px;
-    font-size: 24px;
-    /* box-shadow: 0 0.2px 0 rgba(255,255,255,255) inset; */
-
-  }
-
-  .btn {
-    display: none;
-  }
 }
