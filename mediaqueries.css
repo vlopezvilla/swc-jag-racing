@@ -1,0 +1,73 @@
+/* THIS CODE IS REPONSIBLE TO MAKE THE WEBPAGE RESPONSIVE */
+
+/*
+HOME PAGE 
+*/
+
+/* navigation bar */
+@media screen and (max-width: 1200px) {
+    #desktop-nav{
+        display: none;
+    }
+    /*
+    #hamburger-nav{
+        display: flex;
+    }
+    */
+}
+
+/* The more information columns */
+@media screen and (max-width: 750px) {
+    
+    .section-container {
+        flex-direction: column; /* Switch to a column layout on smaller screens */
+      }
+    
+      .column,
+      .text-content {
+        width: 100%; /* Make columns take full width on smaller screens */
+      }
+  }
+
+
+  @media screen and (max-width: 1100px)
+{
+  .hamburger,
+  .toggle-menu{
+    display: block;
+  }
+
+  .hamburger{
+    z-index: 5;
+  }
+  .nav__links{
+    z-index: 4;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    background: var(--secondary-color);
+    width: 300px;
+    height: 100%;
+    padding: 65px;
+  }
+
+  .nav__links li
+  {
+    width: 100%;
+  }
+
+  .nav__links a
+  .nav__links a:hover{ 
+    padding: 30px;
+    font-size: 24px;
+    /* box-shadow: 0 0.2px 0 rgba(255,255,255,255) inset; */
+
+  }
+
+  .btn {
+    display: none;
+  }
+}

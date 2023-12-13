@@ -1,0 +1,217 @@
+/* CSS FOR CONTACT PAGE */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
+
+:root{
+    /* colors */
+    --primary-color: #ab0534;
+    --primary-color-dark:  #5e011c;
+    --secondary-color: #f0b312;
+    --seconday-color-dark: #c79304;
+    --text-dark: #000000;
+    --text-light: #676767;
+    --white: #ffffff;
+
+    /* dimensions */
+    --max-width: 1200px;
+
+    /* font sizes */
+    --main-titles: 85px;
+    --sub-title: 26px;
+    --body-text: 16px;
+    --links: 20px;
+}
+
+/* START OF NAV BAR */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--white);
+}
+
+
+.btn {
+  padding: 0.75rem 1rem;
+  outline: none;
+  border: none;
+  font-size: var(--links);
+  font-weight: 500;
+  font-family: 'Afacad', sans-serif;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: var(--links);
+}
+
+.nav__container
+{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav__logo {
+  max-width: 250px;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+
+.link a {
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: var(--text-dark);
+}
+
+.link a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  transition: 0.3s;
+}
+
+.link a:hover::after {
+  margin-top: 0%;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.header__container {
+  position: relative;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-bar
+{
+    width: 100%;
+    background-color: var(--white);
+}
+
+/* HAMBURGER NAV */
+
+.hamburger{
+  position: relative; 
+  width: 30px;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 4;
+  transition: 0.3s;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  right: 0;
+  background: var(--primary-color);
+  border-radius: 10px; /* Corrected value */
+  transition: 0.3s; /* Added transition property */
+}
+
+.hamburger:before{
+  top: -10px;
+  width: 20px;
+}
+
+.hamburger:after{
+  top: 10px;
+  width: 25px;
+}
+
+.toggle-menu{
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  z-index: 3;
+  cursor: pointer;
+  opacity: 0;
+}
+
+/* the hamburger will be hidden depending on screen size */
+.hamburger,
+.toggle-menu{
+  display: none;
+}
+
+.navigation input:checked ~ .hamburger{
+  background: transparent;
+}
+
+.navigation input:checked ~ .hamburger:before{
+  top: 0;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+
+.navigation input:checked ~ .hamburger:after{
+  top: 0;
+  transform: rotate(45deg);
+  width: 30px;
+}
+
+
+.navigation input:checked ~.nav__links{
+  right: 0px;
+}
