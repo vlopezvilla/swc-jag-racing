@@ -217,3 +217,67 @@ nav {
   .navigation input:checked ~.nav__links{
     right: 0px;
   }
+
+/* aboutInfo */
+
+.headerBaja{
+  width:90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px auto; 
+}
+.headerBaja h1{
+  font-size: 32px;
+  color:#ab0534;
+  margin-bottom: 12px;
+  position: relative;
+}
+.headerBaja h1::after {
+  content: "";
+  border:1px solid #f30;
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  display: block;
+  margin:0 auto;
+  background-color: var;
+}
+.info_baja p{
+  font-size: 14px;
+  color: #00000;
+  margin-bottom: 35px;
+  align-items: center;
+  text-align: center;
+}
+.about{
+  width: 90%;
+  margin:0 auto;
+  padding:10px 20px;
+}
+.baja_img{
+  flex:1;
+  margin-right: 40px;
+  overflow: hidden;
+}
+.baja_img sae-picture{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: 0.5s ease;
+}
+.jagracing{
+  flex: 1;
+}
+.about_jag h2{
+  font-size: 23px;
+  margin-bottom 15px
+  color: #00000
+}
+.about_jag p{
+  font-size: 16px;
+  line-height: 1.5;
+  color: #00000
+}
