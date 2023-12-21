@@ -82,4 +82,23 @@ HOME PAGE
   #about p {
     padding: 20px;
   };
+
+}
+
+@media screen and (max-width: 995px)
+{
+  .contact-us{
+    padding: 20px;
+  }
+
+  .box{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "form"
+        "info"
+        "map";
+  }
 }

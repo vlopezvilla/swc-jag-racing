@@ -11,6 +11,7 @@
     --seconday-color-dark: #c79304;
     --text-dark: #000000;
     --text-light: #676767;
+    --text-ultra-light: #b3b3b3; 
     --white: #ffffff;
 
     /* dimensions */
@@ -76,6 +77,8 @@ a {
 body {
   font-family: "Poppins", sans-serif;
   font-size: var(--links);
+  align-items: center;
+  justify-content: center;
 }
 
 .nav__container
@@ -97,7 +100,11 @@ nav {
 }
 
 .nav__logo {
-  max-width: 250px;
+  width: 310px;
+  height: 100px;
+  clip-path: inset(5px 0 15px 0); /* Adjust the values as needed */
+  margin: 0;
+  padding: 0;
 }
 
 .nav__links {
@@ -214,4 +221,195 @@ nav {
 
 .navigation input:checked ~.nav__links{
   right: 0px;
+}
+
+/* CONTACT FORM */
+.contact-us{
+  position: relative;
+  width: 100%;
+  padding: 40px 100px;
+}
+
+.contact-us .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-us .title h2{
+  font-family: 'Inter', sans-serif;
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+/* Grid format with three parts */
+.form{
+  grid-area: form;
+}
+
+.info{
+  grid-area: info;
+}
+
+.map{
+  grid-area: map;
+}
+
+.contact{
+  padding: 40px;
+  background-color: var(--white);
+}
+
+.box{
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 3.5fr 4fr;
+  grid-template-areas:
+    "form info"
+    "form map";
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+/* Subtitle for the contact form */
+.contact h3{
+  color: var(--text-dark);
+  font-size: var(--links);
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+}
+
+/* form */ 
+.formBox{
+  position: relative;
+  width: 100%;
+  
+}
+
+.formBox .row50{
+  display: flex;
+  gap: 20px;
+}
+
+.inputBox{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.formBox .row100 .inputBox{
+  width: 100%;
+}
+
+/* Titles for each input pox */
+.inputBox span{
+  color: var(--primary-color);
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.inputBox textarea{
+  padding: 10px;
+  font-size: var(--body-text);
+  outline:none;
+  border: 1px solid var(--text-light);
+  resize: none;
+  min-height: 180px;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+/* Submit button */
+/* The boxes where the user will input their info */
+.inputBox input,
+.inputBox textarea {
+  padding: 10px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid var(--text-light);
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s; 
+}
+
+/* hover effect when the user clicks into the input boxes */
+.inputBox input:focus,
+.inputBox textarea:focus {
+  background-color: #f2f2f2; /* Change background color when focused to light gray */
+}
+
+/* Submit button */
+.inputBox input[type="submit"] {
+  background: var(--primary-color);
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  max-width: 128px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 14px 15px;
+  transition: background-color 0.3s; 
+  border-radius: 0.25rem;
+}
+
+.inputBox input[type="submit"]:hover {
+  background-color: var(--primary-color-dark); /* Change background color on hover */
+}
+
+
+.inputBox ::placeholder{
+  color: var(--text-ultra-light);
+}
+
+/* info */
+.info{
+  background: var(--secondary-color);
+}
+
+.info h3{
+  color: var(--body-text);
+  padding-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+}
+
+.info .infoBox div{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info .infoBox div span{
+  min-width: 40px;
+  height: 40px;
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.info .infoBox div p{
+  color: var(--text-dark);
+}
+
+.info .infoBox div a{
+  color: var(--text-dark);
+  text-decoration: none;
+}
+
+.map{
+  padding: 0;
+}
+
+.map iframe{
+  width: 100%;
+  height: 100%;
 }

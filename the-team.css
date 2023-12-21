@@ -97,7 +97,11 @@ nav {
 }
 
 .nav__logo {
-  max-width: 250px;
+  width: 310px;
+  height: 100px;
+  clip-path: inset(5px 0 15px 0); /* Adjust the values as needed */
+  margin: 0;
+  padding: 0;
 }
 
 .nav__links {
@@ -215,3 +219,6 @@ nav {
 .navigation input:checked ~.nav__links{
   right: 0px;
 }
+
+/* The team information */
+

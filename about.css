@@ -96,8 +96,11 @@ nav {
 }
 
 .nav__logo {
-  max-width: 250px;
-  cursor: default;
+  width: 310px;
+  height: 100px;
+  clip-path: inset(5px 0 15px 0); /* Adjust the values as needed */
+  margin: 0;
+  padding: 0;
 }
 
 .nav__links {
@@ -149,7 +152,6 @@ nav {
 /* END OF NAV BAR */
 
 /* HAMBURGER NAV */
-
   .hamburger{
     position: relative; 
     width: 30px;

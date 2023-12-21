@@ -99,7 +99,11 @@ nav {
 }
 
 .nav__logo {
-  max-width: 250px;
+  width: 310px;
+  height: 100px;
+  clip-path: inset(5px 0 15px 0); 
+  margin: 0;
+  padding: 0;
 }
 
 .nav__links {
@@ -240,6 +244,7 @@ nav {
     font-family: 'Inter', sans-serif;
     line-height: 1.5;
     flex: 1;
+    padding: 3rem;
 }
 
 .text-content p a {
