@@ -245,17 +245,23 @@ nav {
   margin:0 auto;
   background-color: var;
 }
+.info_baja{
+  width: 90%;
+  margin:0 auto;
+  padding:10px 20px;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .info_baja p{
   font-size: 14px;
   color: #00000;
   margin-bottom: 35px;
   align-items: center;
   text-align: center;
-}
-.about{
-  width: 90%;
-  margin:0 auto;
-  padding:10px 20px;
 }
 .baja_img{
   flex:1;
@@ -268,16 +274,17 @@ nav {
   display: block;
   transition: 0.5s ease;
 }
-.jagracing{
+.subheader{
   flex: 1;
 }
-.about_jag h2{
+.subheader h2{
   font-size: 23px;
   margin-bottom 15px
   color: #00000
 }
-.about_jag p{
-  font-size: 16px;
+.jag_info p{
+  flex: 1;
+  font-size: 15px;
   line-height: 1.5;
   color: #00000
 }
