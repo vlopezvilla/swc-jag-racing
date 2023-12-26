@@ -9,6 +9,7 @@ HOME PAGE
     #desktop-nav{
         display: none;
     }
+   
 }
 
 /* The more information columns */
@@ -101,4 +102,6 @@ HOME PAGE
         "info"
         "map";
   }
+
+  
 }

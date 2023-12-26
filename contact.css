@@ -102,7 +102,7 @@ nav {
 .nav__logo {
   width: 310px;
   height: 100px;
-  clip-path: inset(5px 0 15px 0); /* Adjust the values as needed */
+  clip-path: inset(5px 0 15px 0); 
   margin: 0;
   padding: 0;
 }
@@ -218,7 +218,6 @@ nav {
   width: 30px;
 }
 
-
 .navigation input:checked ~.nav__links{
   right: 0px;
 }
@@ -240,6 +239,15 @@ nav {
   font-family: 'Inter', sans-serif;
   color: var(--primary-color);
   font-size: 2rem;
+}
+
+.contact-us .title h2::after {
+  content: "";
+  display: block;
+  width: 100px; 
+  height: 2px; 
+  background-color: var(--primary-color);
+  margin: 10px auto; 
 }
 
 /* Grid format with three parts */
@@ -342,22 +350,36 @@ nav {
   background-color: #f2f2f2; /* Change background color when focused to light gray */
 }
 
-/* Submit button */
-.inputBox input[type="submit"] {
-  background: var(--primary-color);
-  color: var(--white);
-  font-family: "Poppins", sans-serif;
-  font-size: 1.1rem;
-  max-width: 128px;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 14px 15px;
-  transition: background-color 0.3s; 
-  border-radius: 0.25rem;
+.invalid-email {
+  background-color: #ffcccc; /* Set the background color to red or any other color you prefer */
 }
 
-.inputBox input[type="submit"]:hover {
+/* Submit button */
+.button-area button{
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  background: var(--primary-color);
+  color: var(--white);
+  cursor: pointer;
+  padding: 10px 25px;
+  border-radius: 0.25rem;
+  border: none;
+}
+
+.button-area button:hover {
   background-color: var(--primary-color-dark); /* Change background color on hover */
+}
+
+/* Status Message */
+.button-area {
+  display: flex;
+  align-items: center;
+}
+
+.button-area span{
+  color: var(--text-dark);
+  margin-left: 20px;
+  display: none; /* hide the text until user clicks on button */
 }
 
 
@@ -368,6 +390,7 @@ nav {
 /* info */
 .info{
   background: var(--secondary-color);
+  
 }
 
 .info h3{

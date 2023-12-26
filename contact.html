@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+
     <!--Linking the css files-->
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
+  <script src="script.js"></script>
     <div class = "nav-bar">
         <nav class = "section__container nav__container">
             <div class="nav__logo">
@@ -42,42 +45,58 @@
             <!--Form-->
             <div class = "contact form">
               <h3>Send a Message to Our Team</h3>
-              <form>
+
+              <!--Input Validation for Contact Page with the use of JavaScript-->
+            <form id = "form" onsubmit="sendEmail(); return false;">
                 <div class = "formBox">
                   <div class = "row50">
+
+                    <!--Name of sender-->
                     <div class = "inputBox"> 
-                      <span>Full Name</span>
-                      <input type = "text" placeholder = "Your Name">
+                      <span>Full Name*</span>
+                      <input type = "text" name = "name" id = "name" placeholder = "Your Name">
                     </div>
 
+                    <!--Email of sender-->
                      <div class = "inputBox"> 
-                      <span>Email</span>
-                      <input type = "text" placeholder = "Your Email">
+                      <span>Email*</span>
+                      <input type = "text" name = "email" id = "email" placeholder = "Your Email">
                     </div>
                     </div>
 
+                    <!--Phone number of sender-->
                   <div class = "row50">
                     <div class = "inputBox"> 
                       <span>Mobile</span>
-                      <input type = "text" placeholder = "Phone Number">
+                      <input type = "text" name = "cellNum" id = "cellNum" placeholder = "Phone Number">
                     </div>
 
+                    <!--Subject of their message-->
                     <div class = "inputBox"> 
-                      <span>Subject</span>
-                      <input type = "text" placeholder = "Subject">
+                      <span>Subject*</span>
+                      <input type = "text" name = "subject" id = "subject" placeholder = "Subject">
                     </div>
                   </div>
 
-                    <div class = "row100">
-                      <div class = "inputBox"> 
-                        <span>Message</span>
-                        <textarea placeholder="Message"></textarea>
-                      </div>
-                    </div>
+                  <!-- Status message element -->
+                 
 
+                  <!-- Text box where the user can enter their message -->
+                  <div class="row100">
+                    <div class="inputBox">
+                      <span>Message</span>
+                      <textarea id="message" placeholder="Message"></textarea>
+                      <div id="statusMessage"></div>
+                    </div>
+                  </div> 
+
+                    <!--Submit Button-->
                     <div class = "row100">
                       <div class = "inputBox"> 
-                        <input type = "submit" value="Send">
+                        <div class="button-area">
+                          <button type="submit" value = "Send">Send</button>
+                          <span id = "statusMessage">Sending your message...</span>
+                        </div>
                       </div>
                     </div>
 
@@ -87,7 +106,7 @@
 
             <!--info box-->
             <div class = "contact info">
-              <h3>Contact Info</h3>
+              <h3>Contact Information</h3>
               <div class = "infoBox">
                 <div>
                   <span> <ion-icon name="location-outline"> </ion-icon></span>
@@ -96,12 +115,12 @@
 
                 <div>
                   <span> <ion-icon name="mail-outline"></ion-icon> </span>
-                  <a href= "mailto:vl1083809@swccd.edu">vl1083809@swccd.edu</a> <!--Include contact email-->
+                  <a href= "mailto:dkalantarov@swccd.edu">dkalantarov@swccd.edu</a> <!--Include contact email-->
                 </div>
 
                 <div>
                   <span><ion-icon name="call-outline"></ion-icon></span>
-                  <a href= "#">(619) ___-____</a> <!--Include contact email-->
+                  <a href= "tel:+16194216700">(619) 421-6700 x5870</a> <!--Include contact cell phone-->
                 </div>
               </div>
             </div>
@@ -119,7 +138,14 @@
 
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>        
-      <script src="script.js"></script>
-      
+        
+        <script>
+          // document.getElementById("form").addEventListener("submit", function (event) {
+          //   event.preventDefault();
+          //   sendEmail();
+          // });
+        </script>
+
+
   </body>
   </html>
