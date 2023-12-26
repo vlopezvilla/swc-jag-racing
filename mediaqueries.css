@@ -86,22 +86,32 @@ HOME PAGE
 
 }
 
-@media screen and (max-width: 995px)
-{
-  .contact-us{
+@media screen and (max-width: 995px) {
+  .contact-us {
     padding: 20px;
+    width: 100%;
   }
 
-  .box{
+  .box {
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-        "form"
-        "info"
-        "map";
+      "form"
+      "info"
+      "map";
+    width: 100%;
+  }
+}
+
+/* Additional styles for larger screens */
+@media screen and (min-width: 996px) {
+  .contact-us {
+    padding: 40px 100px;
   }
 
-  
+  .box {
+    margin-top: 20px; /* Add margin for spacing */
+  }
 }

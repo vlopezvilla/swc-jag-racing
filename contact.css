@@ -32,6 +32,11 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .section__container {
   max-width: var(--max-width);
   margin: auto;
@@ -45,7 +50,6 @@
   text-align: center;
   color: var(--white);
 }
-
 
 .btn {
   padding: 0.75rem 1rem;
@@ -227,6 +231,7 @@ nav {
   position: relative;
   width: 100%;
   padding: 40px 100px;
+  margin: 0; 
 }
 
 .contact-us .title {
@@ -278,6 +283,7 @@ nav {
     "form map";
   grid-gap: 20px;
   margin-top: 20px;
+  margin: 0; 
 }
 
 /* Subtitle for the contact form */
@@ -339,15 +345,17 @@ nav {
   padding: 10px;
   font-size: 18px;
   outline: none;
-  border: 1px solid var(--text-light);
+  border: none;
+  background-color: #f2f2f2;
   font-family: "Poppins", sans-serif;
-  transition: background-color 0.3s; 
+  transition: background-color 0.3s;
+  border-radius: 0.25rem; 
 }
 
 /* hover effect when the user clicks into the input boxes */
 .inputBox input:focus,
 .inputBox textarea:focus {
-  background-color: #f2f2f2; /* Change background color when focused to light gray */
+  background-color: #dddddd; /* Change background color when focused to light gray */
 }
 
 .invalid-email {
@@ -390,6 +398,7 @@ nav {
 /* info */
 .info{
   background: var(--secondary-color);
+  border-radius: 0.35rem;
   
 }
 
@@ -433,6 +442,8 @@ nav {
 }
 
 .map iframe{
+  padding: 0;
   width: 100%;
   height: 100%;
+  border-radius: 0.35rem;
 }
