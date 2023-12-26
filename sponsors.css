@@ -12,6 +12,7 @@
     --text-dark: #000000;
     --text-light: #676767;
     --white: #ffffff;
+    --light-grey: #f0f0f0;
 
     /* dimensions */
     --max-width: 1200px;
@@ -220,4 +221,85 @@ nav {
 
 .navigation input:checked ~.nav__links{
   right: 0px;
+}
+
+/*
+Content portion of the page
+*/
+
+
+#intro h2 
+{
+    color: var(--primary-color);
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 45px;
+    font-family: 'Inter', sans-serif;
+}
+
+#intro h2::after {
+    content: "";
+    display: block;
+    width: 150px; /* Adjust the width of the underline */
+    height: 2px; /* Set the height and color of the underline */
+    background-color: var(--primary-color);
+    margin: 10px auto; /* Adjust the margin to center the underline */
+}
+
+#intro p{
+  text-align: center;
+}
+
+#sponsor-info{
+  text-align: center;
+  margin-top: 5rem;
+}
+
+#sponsor-info h3{
+  font-family: 'Inter', sans-serif;
+}
+
+#sponsor-info p{
+  font-size: var(--body-text);
+  margin: 1rem;
+}
+
+.pdf-frame {
+  padding: 2rem;
+  border: none;
+  margin: 10px auto;
+}
+
+.button-container{
+  text-align: center; /* Center the content horizontally */
+  margin-bottom: 4rem;
+}
+
+.download-button {
+  padding: 8px 16px;
+  outline: none;
+  border: none;
+  font-size: var(--links);
+  font-weight: 500;
+  font-family: 'Afacad', sans-serif;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.download-button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+footer {
+  text-align: center;
+  padding: 20px; /* Adjust the padding as needed */
+  background-color: var(--light-grey); /* Set the background color if desired */
+  font-size: var(--body-text)
+}
+
+footer p {
+  margin: 0;
 }
