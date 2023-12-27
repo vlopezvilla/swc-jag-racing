@@ -218,7 +218,7 @@ nav {
     right: 0px;
   }
 
-/* aboutInfo */
+  /* aboutInfo */
 
 .headerBaja{
   width:90%;
@@ -232,7 +232,7 @@ nav {
 .headerBaja h1{
   font-size: 32px;
   color:#ab0534;
-  margin-bottom: 12px;
+  margin-bottom: 1px;
   position: relative;
 }
 .headerBaja h1::after {
@@ -245,6 +245,8 @@ nav {
   margin:0 auto;
   background-color: var;
 }
+
+/* About Jag Racing */
 .info_baja{
   width: 90%;
   margin:0 auto;
@@ -257,9 +259,9 @@ nav {
   flex-wrap: wrap;
 }
 .info_baja p{
-  font-size: 14px;
+  font-size: 14.5px;
   color: #00000;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
   align-items: center;
   text-align: center;
 }
@@ -276,15 +278,85 @@ nav {
 }
 .subheader{
   flex: 1;
+  background-color: ;
 }
 .subheader h2{
-  font-size: 23px;
-  margin-bottom 15px
-  color: #00000
+  font-size: 24px;
+  margin-bottom 0px;
+  color: #00000;
+}
+.jag_info{
+  flex: 1;
 }
 .jag_info p{
-  flex: 1;
   font-size: 15px;
   line-height: 1.5;
-  color: #00000
+  color: #00000;
+  align-items: center;
+  text-align: left;
+}
+
+/*About Car/ Early Model*/
+
+.info_car{
+  width: 90%;
+  margin:0 auto;
+  padding:10px 20px;
+}
+.car_header{
+  width:90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px auto; 
+}
+.car_header h3{
+  margin-top: 18px;
+  font-size: 28px;
+  margin-bottom 18px;
+  color: #00000;
+  align-items: center;
+  text-align: center;
+}
+.car_header h3::after {
+  content: "";
+  border:1px solid #f30;
+  position: absolute;
+  width: 9.5%;
+  height: 0px;
+  display: block;
+  margin:0 auto;
+  background-color: var;
+}
+.drawer{
+  justify-content: space-between;
+  align-items: center;
+}
+.info_car p{
+  margin-top: 12px;
+  font-size: 14.5px;
+  color: #00000;
+  margin-bottom: 24px;
+  align-items: center;
+  text-align: center;
+}
+
+
+.pdf-frame {
+  padding: 2rem;
+  border: none;
+  margin: 10px auto;
+}
+
+footer {
+  text-align: center;
+  padding: 20px; /* Adjust the padding as needed */
+  background-color: var(--light-grey); /* Set the background color if desired */
+  font-size: var(--body-text)
+}
+
+footer p {
+  margin: 0;
 }
