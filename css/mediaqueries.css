@@ -42,6 +42,16 @@ HOME PAGE
     font-size: 50px;
     padding: 0rem 50px 0rem;
   }
+
+  .hamburger {
+    top: -10px; /* Adjust the top position */
+    left: 140px; /* Adjust the right position */
+  }
+
+  .toggle-menu {
+    right: 10px; /* Adjust the right margin */
+  }
+
   .hamburger,
   .toggle-menu{
     display: block;

@@ -1,0 +1,261 @@
+/* CSS FOR TEAM PAGE */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
+
+
+:root{
+    /* colors */
+    --primary-color: #ab0534;
+    --primary-color-dark:  #5e011c;
+    --secondary-color: #f0b312;
+    --seconday-color-dark: #c79304;
+    --text-dark: #000000;
+    --text-light: #676767;
+    --white: #ffffff;
+
+    /* font sizes */
+    --main-titles: 85px;
+    --sub-title: 26px;
+    --body-text: 16px;
+    --links: 20px;
+}
+
+
+/* START OF NAV BAR */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: var(--links);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 8px hsla(220, 68%, 12%, 0.1);
+  background-color: white;
+  z-index: 10;
+  .header {
+    height: 0px; 
+  }
+}
+
+/* Nav */
+.nav {
+  height: 75px;
+}
+.nav__data {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* JAG Racing Logo*/
+.logo img {
+    width: 230px; 
+    height: auto; 
+    max-width: 250px; 
+  }
+
+/* Hamurger Menu Icon */
+.nav__toggle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+/* Side Menu for smaller screens */
+.nav__toggle-menu, .nav__toggle-close {
+  font-size: 2rem;
+  color: var(--primary-color);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  inset: 0;
+  cursor: pointer;
+  transition: opacity 0.1s, transform 0.4s;
+}
+.nav__toggle-close {
+  opacity: 0;
+}
+
+
+@media screen and (max-width: 1118px) {
+  .nav__menu {
+    background-color: var(--white);
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    width: 100%;
+    height: calc(100vh - 3.5rem);
+    overflow: auto;
+    padding-block: 1.5rem 4rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: top 0.4s, opacity 0.3s;
+    z-index: 10;
+  }
+  .nav__menu::-webkit-scrollbar-thumb {
+    background-color: hsl(220, 12%, 70%);
+  }
+
+  a.nav__link {
+    text-decoration: none;
+  }
+
+  /* Allows the underline hover effect to be hidden */
+  body.menu-open a.nav__link::after {
+    background-color: transparent !important; /* Override underline effect when side menu is open */
+  }
+
+  a.nav__link::after {
+    display: none; 
+  }
+
+}
+
+/* Nav Bar Links */
+.nav__link {
+  color: var(--text-dark);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+/* Side menu links hover effect*/
+.nav__link:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Contact Us Button */
+button.nav__link  {
+    background-color: var(--primary-color); 
+    color: var(--white); 
+    border-radius: 8px; 
+    padding: 10px 12px; 
+    margin-top: 0.75rem;
+    margin-left: 1.5rem;
+    font-family: "Poppins", "sans-serif";
+    font-size: 1rem;
+    border: none;
+}
+
+/* Contact Us Button Hover Effect */
+button.nav__link:hover  {
+  background-color: var(--primary-color-dark); 
+}
+
+a.nav__link {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+a.nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: transparent; 
+  transition: background-color 0.3s ease; 
+  margin-bottom: 15px;
+}
+
+a.nav__link:hover::after {
+  background-color: var(--primary-color); 
+  transition: 0.3s;
+  width: 100%;
+}
+
+/* Show menu */
+.show-menu {
+  opacity: 1;
+  top: 4.5rem;
+  pointer-events: initial;
+}
+
+/* Show icon */
+.show-icon .nav__toggle-menu {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.show-icon .nav__toggle-close {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+/* Rotate dropdown icon */
+.show-dropdown .dropdown__arrow {
+  transform: rotate(180deg);
+}
+
+/* For large devices */
+@media screen and (min-width: 1118px) {
+  /* Nav */
+  .nav {
+    height: calc(var(--header-height) + 2rem);
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    column-gap: 3rem;
+    height: 100%;
+  }
+  .nav li {
+    display: flex;
+  }
+  .nav__link {
+    padding: 0;
+  }
+  .nav__link:hover {
+    background-color: initial;
+  }
+
+}
+@media screen and (min-width: 1152px) {
+  .container {
+    margin-inline: auto;
+  }
+}

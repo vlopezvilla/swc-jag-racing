@@ -2,41 +2,22 @@
     This code controls the hamburger side menu animation
 */
 
-document.addEventListener('DOMContentLoaded', function () {
-    var toggleMenu = document.querySelector('.toggle-menu');
-    var hamburger = document.querySelector('.hamburger');
-    var sidebar = document.querySelector('.sidebar');
+/* Side Menu will be shown */
+const showMenu = (toggleId, navId) =>{
+  const toggle = document.getElementById(toggleId),
+        nav = document.getElementById(navId)
 
-    toggleMenu.addEventListener('change', function () {
-        if (toggleMenu.checked) {
-            // Hamburger to X animation
-            hamburger.classList.add('open');
-            // Show the sidebar
-            sidebar.style.display = 'block';
-        } else {
-            // X to hamburger animation
-            hamburger.classList.remove('open');
-            // Hide the sidebar
-            sidebar.style.display = 'none';
-        }
-    });
+  toggle.addEventListener('click', () =>{
+      // Add show-menu class to nav menu
+      nav.classList.toggle('show-menu')
+      // Add show-icon to show and hide menu icon
+      toggle.classList.toggle('show-icon')
 
-    // Add a click event listener to the hamburger icon for manual toggling
-    hamburger.addEventListener('click', function () {
-        toggleMenu.checked = !toggleMenu.checked;
-        if (toggleMenu.checked) {
-            // Hamburger to X animation
-            hamburger.classList.add('open');
-            // Show the sidebar
-            sidebar.style.display = 'block';
-        } else {
-            // X to hamburger animation
-            hamburger.classList.remove('open');
-            // Hide the sidebar
-            sidebar.style.display = 'none';
-        }
-    });
-});
+  })
+}
+
+showMenu('nav-toggle','nav-menu')
+
 
 /*
     This code will handle the contact page verification 
