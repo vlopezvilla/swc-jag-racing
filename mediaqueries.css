@@ -9,6 +9,7 @@ HOME PAGE
     #desktop-nav{
         display: none;
     }
+   
 }
 
 /* The more information columns */
@@ -41,6 +42,16 @@ HOME PAGE
     font-size: 50px;
     padding: 0rem 50px 0rem;
   }
+
+  .hamburger {
+    top: -10px; /* Adjust the top position */
+    left: 140px; /* Adjust the right position */
+  }
+
+  .toggle-menu {
+    right: 10px; /* Adjust the right margin */
+  }
+
   .hamburger,
   .toggle-menu{
     display: block;
@@ -82,4 +93,35 @@ HOME PAGE
   #about p {
     padding: 20px;
   };
+
+}
+
+@media screen and (max-width: 995px) {
+  .contact-us {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "form"
+      "info"
+      "map";
+    width: 100%;
+  }
+}
+
+/* Additional styles for larger screens */
+@media screen and (min-width: 996px) {
+  .contact-us {
+    padding: 40px 100px;
+  }
+
+  .box {
+    margin-top: 20px; /* Add margin for spacing */
+  }
 }

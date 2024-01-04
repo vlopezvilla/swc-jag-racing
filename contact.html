@@ -1,37 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+
     <!--Linking the css files-->
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
-    <div class = "nav-bar">
-        <nav class = "section__container nav__container">
-            <div class="nav__logo">
-                <a href="#"><img src="assets/JAG-logo.png" alt="logo" /></a>
+  <header class="header">
+    <nav class="nav container">
+        <div class="nav__data">
+
+            <!--Jag Logo-->
+            <a href="index.html" class = "logo">
+                <img src="assets/JAG_LOGO.svg" alt="logo" />
+            </a>
+
+            <!--Hamburger Icon-->
+            <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+            <!--Hamburger Menu will create an 'X' when clicked on-->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line nav__toggle-menu"></i>
+                <i class="ri-close-line nav__toggle-close"></i>
             </div>
-    
-          <div class = "navigation"> 
-            <input type = "checkbox" class = "toggle-menu">
-            <div class = "hamburger"></div>
-              <ul class="nav__links">
-                <li class="link"><a href="index.html">HOME</a></li>
-                <li class="link"><a href="about.html">ABOUT</a></li>
-                <li class="link"><a href="the-team.html">THE TEAM</a></li>
-                <li class="link"><a href="sponsors.html">SPONSORSHIPS</a></li>
-                <li class="link"><a href="#">DONATE</a></li> <!--Possibly link a paypal account to accept donos-->
-              </ul>
-              </div>
-              <button class="btn">CONTACT US</button>
-          
         </div>
-        </nav>
-  
-      <script src="script.js"></script>
-      
+
+        <!--NAV MENU-->
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+              <li><a href="index.html" class="nav__link">HOME</a></li>
+              <li><a href="about.html" class="nav__link">ABOUT</a></li>
+              <li><a href="the-team.html" class="nav__link">THE TEAM</a></li>
+              <li><a href="sponsors.html" class="nav__link">SPONSORSHIPS</a></li>
+              <li><a href="contact.html"><button class="nav__link">CONTACT US</button></a></li>
+          </ul>
+      </div>
+    </nav>
+  </header>
+        
+        <!--Contact Us Page-->
+
+        <div class = "contact-us">
+          <div class = "title">
+            <h2>Contact Us! </h2>
+          </div>
+
+          <div class = "box">
+
+            <!--Form-->
+            <div class = "contact form">
+              <h3>Send a Message to Our Team</h3>
+
+              <!--Input Validation for Contact Page with the use of JavaScript-->
+            <form id = "form" onsubmit="sendEmail(); return false;">
+                <div class = "formBox">
+                  <div class = "row50">
+
+                    <!--Name of sender-->
+                    <div class = "inputBox"> 
+                      <span>Full Name*</span>
+                      <input type = "text" name = "name" id = "name" placeholder = "Your Name">
+                    </div>
+
+                    <!--Email of sender-->
+                     <div class = "inputBox"> 
+                      <span>Email*</span>
+                      <input type = "text" name = "email" id = "email" placeholder = "Your Email">
+                    </div>
+                    </div>
+
+                    <!--Phone number of sender-->
+                  <div class = "row50">
+                    <div class = "inputBox"> 
+                      <span>Mobile</span>
+                      <input type = "text" name = "cellNum" id = "cellNum" placeholder = "Phone Number">
+                    </div>
+
+                    <!--Subject of their message-->
+                    <div class = "inputBox"> 
+                      <span>Subject*</span>
+                      <input type = "text" name = "subject" id = "subject" placeholder = "Subject">
+                    </div>
+                  </div>
+
+                  <!-- Status message element -->
+                 
+
+                  <!-- Text box where the user can enter their message -->
+                  <div class="row100">
+                    <div class="inputBox">
+                      <span>Message</span>
+                      <textarea id="message" placeholder="Message"></textarea>
+                      <div id="statusMessage"></div>
+                    </div>
+                  </div> 
+
+                    <!--Submit Button-->
+                    <div class = "row100">
+                      <div class = "inputBox"> 
+                        <div class="button-area">
+                          <button type="submit" value = "Send">Send</button>
+                          <span id = "statusMessage">Sending your message...</span>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </form>
+
+            <!--info box-->
+            <div class = "contact info">
+              <h3>Contact Information</h3>
+              <div class = "infoBox">
+                <div>
+                  <span> <ion-icon name="location-outline"> </ion-icon></span>
+                  <p>Chula Vista, California</p>
+                </div>
+
+                <div>
+                  <span> <ion-icon name="mail-outline"></ion-icon> </span>
+                  <a href= "mailto:dkalantarov@swccd.edu">dkalantarov@swccd.edu</a> <!--Include contact email-->
+                </div>
+
+                <div>
+                  <span><ion-icon name="call-outline"></ion-icon></span>
+                  <a href= "tel:+16194216700">(619) 421-6700 x5870</a> <!--Include contact cell phone-->
+                </div>
+              </div>
+            </div>
+            
+            <!--Map-->
+            <div class = "contact map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3359.72674558184!2d-116.9978233!3d32.
+            6400996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d94f9031e6e09f%3A0x35be715fec39a696!2sSouthwestern
+            %20College!5e0!3m2!1sen!2sus!4v1703154348477!5m2!1sen!2sus" width="600" height="450" style="border:0;" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+          </div>
+        </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>        
+        
+        <script src="script.js"></script>
+
+
   </body>
   </html>
