@@ -257,4 +257,154 @@ a.nav__link:hover::after {
   .container {
     margin-inline: auto;
   }
+
+  
+  
+  .navigation input:checked ~.nav__links{
+    right: 0px;
+  }
+
+  /* aboutInfo */
+
+.headerBaja{
+  width:90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px auto; 
 }
+.headerBaja h1{
+  font-size: 32px;
+  color:#ab0534;
+  margin-bottom: 1px;
+  position: relative;
+}
+.headerBaja h1::after {
+  content: "";
+    display: block;
+    width: 100px;
+    height: 2px; 
+    background-color: #ab0534;
+    margin: 10px auto; 
+}
+
+/* About Jag Racing */
+.info_baja{
+  width: 90%;
+  margin:0 auto;
+  padding:10px 20px;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* initial description */
+.container p{
+  font-size: 14.5px;
+  color: #00000;
+  margin-bottom: 32px;
+  align-items: center;
+  text-align: center;
+  
+}
+/* img block with text */
+.baja_img{
+  flex:1;
+  margin-right: 40px;
+  overflow: hidden;
+}
+.baja_img sae-picture{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: 0.5s ease;
+}
+.subheader{
+  flex: 1;
+}
+.subheader h2{
+  font-size: 24px;
+  margin-bottom 0px;
+  color: #00000;
+}
+.jag_info{
+  flex: 1;
+}
+.jag_info p{
+  font-size: 15px;
+  line-height: 1.5;
+  color: #00000;
+  align-items: center;
+  text-align: left;
+}
+
+/*About Car/ Early Model pdf*/
+
+.info_car{
+  width: 90%;
+  margin:0 auto;
+  padding:10px 20px;
+}
+.car_header{
+  width:90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 20px auto; 
+}
+.car_header h3{
+  margin-top: 18px;
+  font-size: 28px;
+  margin-bottom 18px;
+  color: #00000;
+  align-items: center;
+  text-align: center;
+}
+.car_header h3::after {
+  content: "";
+  border:1px solid #f30;
+  position: absolute;
+  width: 9%;
+  height: 0px;
+  display: block;
+  margin:0 auto;
+  background-color: var;
+}
+.drawer{
+  justify-content: space-between;
+  align-items: center;
+}
+.info_car p{
+  margin-top: 12px;
+  font-size: 14.5px;
+  color: #00000;
+  margin-bottom: 24px;
+  align-items: center;
+  text-align: center;
+}
+
+
+.pdf-frame {
+  padding: 2rem;
+  border: none;
+  margin: 10px auto;
+}
+
+footer {
+  text-align: center;
+  padding: 20px; /* Adjust the padding as needed */
+  background-color: #f0f0f0; 
+  font-size: var(--body-text)
+}
+
+footer p {
+  margin: 0;
+}
+}
+
