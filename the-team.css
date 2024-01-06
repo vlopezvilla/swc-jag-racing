@@ -346,29 +346,44 @@ a.nav__link:hover::after {
 /* Team Details */
 
 .team-info{
-  background: #f3b71f;;
+  background: #f3b71f;
   position: relative;
   width: 100%;
-  height: 450vh;
+  height: 400vh;
   padding: 3.5rem;
 }
 
 .titles{
   margin-top: 2rem;
   font-family: 'Inter', sans-serif;
-  
+  margin-left: 10px;
+  font-size: 30px;
 }
 
-/* .title-container{
+.title-container {
   display: flex;
   align-items: center;
-} */
+}
+
+.title-container ion-icon {
+  font-size: 32px;
+  margin-right: 0px;
+}
+
+.title-container span {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+  margin-top: 25px;
+  color: var(--secondary-color);
+}
 
 section#cad-section h3::after{
-  content: "";
-  display: block;
-  width: 0px; 
-  height: 2px; 
   background-color: var(--primary-color);
   margin-top: 4px;
 }
