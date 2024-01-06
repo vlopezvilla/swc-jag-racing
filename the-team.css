@@ -1,24 +1,24 @@
+/* CSS FOR TEAM PAGE */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 
 :root{
     /* colors */
     --primary-color: #ab0534;
     --primary-color-dark:  #5e011c;
-    --secondary-color: #f0b312;
+    --secondary-color: #F3B61F;
     --seconday-color-dark: #c79304;
-    --text-dark: #1B2021;
+    --text-dark:  #1B2021;
     --text-light: #676767;
     --white: #ffffff;
-
-    /* dimensions */
-    --max-width: 1200px;
+    --light-grey: #f0f0f0;
 
     /* font sizes */
     --main-titles: 85px;
-    --sub-title: 26px;
+    --sub-title: 40px;
     --body-text: 16px;
     --links: 20px;
 }
@@ -29,39 +29,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-.section__container {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 5rem 1rem;
-}
-
-.section__header {
-  margin-bottom: 1rem;
-  font-size: 2.25rem;
-  font-weight: 600;
-  text-align: center;
-  color: var(--white);
-}
-
-
-.btn {
-  padding: 0.75rem 1rem;
-  outline: none;
-  border: none;
-  font-size: var(--links);
-  font-weight: 500;
-  font-family: 'Afacad', sans-serif;
-  color: var(--white);
-  background-color: var(--primary-color);
-  border-radius: 0.25rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  background-color: var(--primary-color-dark);
 }
 
 img {
@@ -76,295 +43,225 @@ a {
 body {
   font-family: "Poppins", sans-serif;
   font-size: var(--links);
-
-
-  justify-content: center;
-  height: 100vh;
-  align-items: center;
- 
 }
 
-.nav__container
-{
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 1.5rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-}
-
-.nav__logo {
-  max-width: 250px;
-}
-
-.nav__links {
+ul {
   list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 3rem;
 }
 
-
-.link a {
-  position: relative;
-  padding-bottom: 0.75rem;
-  color: var(--text-dark);
+a {
+  text-decoration: none;
 }
 
-.link a::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  width: 0;
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
   left: 0;
-  bottom: 0;
-  background-color: var(--primary-color);
-  transition: 0.3s;
-}
-
-.link a:hover::after {
-  margin-top: 0%;
   width: 100%;
-  transition: 0.3s;
+  box-shadow: 0 2px 8px hsla(220, 68%, 12%, 0.1);
+  background-color: white;
+  z-index: 10;
+  .header {
+    height: 0px; 
+  }
 }
 
-.header__container {
-  position: relative;
-  padding-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  gap: 2rem;
+/* Nav */
+.nav {
+  height: 75px;
 }
-
-.nav-bar
-{
-    width: 100%;
-    background-color: var(--white);
-}
-
-/* HAMBURGER NAV */
-
-.hamburger{
-  position: relative; 
-  width: 30px;
-  height: 4px;
-  background: var(--primary-color);
-  border-radius: 10px;
-  cursor: pointer;
-  z-index: 4;
-  transition: 0.3s;
-}
-
-.hamburger:before,
-.hamburger:after {
-  content: "";
-  position: absolute;
-  height: 4px;
-  right: 0;
-  background: var(--primary-color);
-  border-radius: 10px; /* Corrected value */
-  transition: 0.3s; /* Added transition property */
-}
-
-.hamburger:before{
-  top: -10px;
-  width: 20px;
-}
-
-.hamburger:after{
-  top: 10px;
-  width: 25px;
-}
-
-.toggle-menu{
-  position: absolute;
-  width: 30px;
+.nav__data {
   height: 100%;
-  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* JAG Racing Logo*/
+.logo img {
+    width: 230px; 
+    height: auto; 
+    max-width: 250px; 
+  }
+
+/* Hamurger Menu Icon */
+.nav__toggle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+/* Side Menu for smaller screens */
+.nav__toggle-menu, .nav__toggle-close {
+  font-size: 2rem;
+  color: var(--primary-color);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  inset: 0;
   cursor: pointer;
+  transition: opacity 0.1s, transform 0.4s;
+}
+.nav__toggle-close {
   opacity: 0;
 }
 
-/* the hamburger will be hidden depending on screen size */
-.hamburger,
-.toggle-menu{
-  display: none;
+
+@media screen and (max-width: 1118px) {
+  .nav__menu {
+    background-color: var(--white);
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    width: 100%;
+    height: calc(100vh - 3.5rem);
+    overflow: auto;
+    padding-block: 1.5rem 4rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: top 0.4s, opacity 0.3s;
+    z-index: 10;
+  }
+  .nav__menu::-webkit-scrollbar-thumb {
+    background-color: hsl(220, 12%, 70%);
+  }
+
+  a.nav__link {
+    text-decoration: none;
+  }
+
+  /* Allows the underline hover effect to be hidden */
+  body.menu-open a.nav__link::after {
+    background-color: transparent !important; /* Override underline effect when side menu is open */
+  }
+
+  a.nav__link::after {
+    display: none; 
+  }
+
 }
 
-.navigation input:checked ~ .hamburger{
-  background: transparent;
-}
-
-.navigation input:checked ~ .hamburger:before{
-  top: 0;
-  transform: rotate(-45deg);
-  width: 30px;
-}
-
-.navigation input:checked ~ .hamburger:after{
-  top: 0;
-  transform: rotate(45deg);
-  width: 30px;
-}
-
-
-.navigation input:checked ~.nav__links{
-  right: 0px;
-}
-
-/*begging of Our team information*/
-*{
-  font-family: Poppins, sans-serif;
-}
-
-.team-info{
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  line-height: 25px;
-}
-
-.member-block {
-  min-height: 75px;
-}
-
-
-/*Set up for card spacing*/
-.team-block {
-  min-height: 75px;
-  height: fit-content;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 0px;
-  margin-right: auto;
-  margin-bottom: 0px;
-  margin-left: auto;
-  justify-content: space-evenly;
-}
-/*Header text*/
-.team-text {
-  text-align: center;
-  line-height: 40px;
-  width: 100%;
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 50px;
-  margin-left: 0px;
-}
-.team-text h1{
-  font-size: 40px;
-  font-weight: 740;
-  color: #ab0534;
-}
-.team-text h1::after{
-    content: "";
-    display: block;
-    width: 100px;
-    height: 2px; 
-    background-color: #ab0534;
-    margin: 10px auto; 
-}
-.team-text p{
-  font-size: 18px;
-}
-
-.team-info {
-  max-width: 1380px;
-  margin-top: 60px;
-  margin-right: auto;
-  margin-bottom: 60px;
-  margin-left: auto;
-  padding-top: 0px;
-  padding-right: 30px;
-  padding-bottom: 0px;
-  padding-left: 30px;
-}
-
-/*Card set up and look*/
-.card {
-  text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 20px 7px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 30px;
-  padding-right: 25px;
-  padding-bottom: 30px;
-  padding-left: 25px;
-}
-
-.member-block {
-  width: 280px;
-  margin-top: 0px;
-  margin-right: 10px;
-  margin-bottom: 25px;
-  margin-left: 10px;
-}
-
-.name {
-  margin-top: 20px;
-  margin-right: 0px;
-  margin-bottom: 5px;
-  margin-left: 0px;
-  font-size: 18px;
-  font-weight: 800;
-}
-
-.position {
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 10px;
-  margin-left: 0px;
-}
-
-.text {
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 20px;
-  margin-left: 0px;
-  color: rgb(122, 122, 122);
-  line-height: 30px;
-}
-
-.linked-icon {
-  width: 70px;
+/* Nav Bar Links */
+.nav__link {
+  color: var(--text-dark);
+  padding: 1.25rem 1.5rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+  text-decoration: none;
 }
 
-.image {
-  clip-path: circle(50% at 50% 50%);
-  width: 130px;
-  height: 130px;
+/* Side menu links hover effect*/
+.nav__link:hover {
+  background-color: var(--secondary-color);
 }
 
-.member-image {
-  max-width: 100%;
+/* Contact Us Button */
+button.nav__link  {
+    background-color: var(--primary-color); 
+    color: var(--white); 
+    border-radius: 8px; 
+    padding: 10px 12px; 
+    margin-top: 0.75rem;
+    margin-left: 1.5rem;
+    font-family: "Poppins", "sans-serif";
+    font-size: 1rem;
+    border: none;
 }
 
-@media (max-width: 500px) {
-  .card-container {
-    width: 100%;
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 25px;
-    margin-left: 0px;
+/* Contact Us Button Hover Effect */
+button.nav__link:hover  {
+  background-color: var(--primary-color-dark); 
+}
+
+a.nav__link {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-dark);
+}
+
+a.nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: transparent; 
+  transition: background-color 0.3s ease; 
+  margin-bottom: 15px;
+}
+
+a.nav__link:hover::after {
+  background-color: var(--primary-color); 
+  transition: 0.3s;
+  width: 100%;
+}
+
+/* Show menu */
+.show-menu {
+  opacity: 1;
+  top: 4.5rem;
+  pointer-events: initial;
+}
+
+/* Show icon */
+.show-icon .nav__toggle-menu {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.show-icon .nav__toggle-close {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+/* Rotate dropdown icon */
+.show-dropdown .dropdown__arrow {
+  transform: rotate(180deg);
+}
+
+/* For large devices */
+@media screen and (min-width: 1118px) {
+  /* Nav */
+  .nav {
+    height: calc(var(--header-height) + 2rem);
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__list {
+    display: flex;
+    column-gap: 3rem;
+    height: 100%;
+  }
+  .nav li {
+    display: flex;
+  }
+  .nav__link {
+    padding: 0;
+  }
+  .nav__link:hover {
+    background-color: initial;
+  }
+
+}
+@media screen and (min-width: 1152px) {
+  .container {
+    margin-inline: auto;
   }
 }
-/* Subtitle */
 
+/* Subtitle */
 #intro h2 
 {
     color: var(--primary-color);
@@ -381,50 +278,6 @@ nav {
   height: 2px; 
   background-color: var(--primary-color);
   margin: 10px auto; 
-}
-
-/* Image card container */
-.image-card {
-  position: relative;
-  overflow: hidden;
-  width: 250px;
-  height: 320px;
-  border-radius: 20px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
-  /* transition: box-shadow 0.3s ease-in-out; */
-}
-
-/* Image styling */
-.image-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Description and Read more button (hidden by default) */
-.overlay .details {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-/* Hover effect */
-.image-card:hover {
-  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */
-}
-
-.image-card:hover img {
-  transform: scale(1.1);
-}
-
-.image-card:hover .overlay {
-  height: 50%;
-}
-
-.image-card:hover .details {
-  display: block;
-  opacity: 1;
 }
 
 /* NEW SECTION */
@@ -458,7 +311,6 @@ nav {
   height: 300px; 
   display: flex;
   flex-direction: column;
-  
 }
 
 .box h3{
@@ -490,7 +342,6 @@ nav {
     padding: 90px 2%;
   }
 }
-
 
 /* Team Details */
 
