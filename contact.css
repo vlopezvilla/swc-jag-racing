@@ -1,6 +1,6 @@
 /* CSS FOR CONTACT PAGE */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
 
 :root{
@@ -86,9 +86,9 @@ a {
 
 /* JAG Racing Logo*/
 .logo img {
-    width: 230px; 
+    width: 100%; 
     height: auto; 
-    max-width: 250px; 
+    max-width: 60%;
   }
 
 /* Hamurger Menu Icon */
@@ -175,6 +175,7 @@ button.nav__link  {
     font-family: "Poppins", "sans-serif";
     font-size: 1rem;
     border: none;
+    font-weight: 500;
 }
 
 /* Contact Us Button Hover Effect */
@@ -306,19 +307,19 @@ a.nav__link:hover::after {
 }
 
 .contact{
-  padding: 40px;
+  padding: 30px;
   background-color: var(--white);
 }
 
 .box{
   position: relative;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 2fr 10fr;
   grid-template-rows: 3.5fr 4fr;
   grid-template-areas:
     "form info"
     "form map";
-  grid-gap: 20px;
+  grid-gap: 20px 0px;
   margin-top: 20px;
   margin: 0; 
 }
