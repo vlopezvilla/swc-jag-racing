@@ -9,8 +9,14 @@ HOME PAGE
     #desktop-nav{
         display: none;
     }
-   
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .logo img {
+    width: 300px;
+  }
+}
+
 
 /* The more information columns */
 @media screen and (max-width: 750px) {
@@ -39,8 +45,8 @@ HOME PAGE
   #intro h4
   {
     position: relative;
-    font-size: 50px;
-    padding: 0rem 50px 0rem;
+    font-size: 42px;
+    padding: 0rem 25px 0rem;
   }
 
   .hamburger {
@@ -91,7 +97,7 @@ HOME PAGE
   }
 
   #about p {
-    padding: 20px;
+    padding: 2rem;
   };
 
 }

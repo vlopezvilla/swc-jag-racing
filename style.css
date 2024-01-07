@@ -108,10 +108,10 @@ a {
   cursor: pointer;
   transition: opacity 0.1s, transform 0.4s;
 }
+
 .nav__toggle-close {
   opacity: 0;
 }
-
 
 @media screen and (max-width: 1118px) {
   .nav__menu {
@@ -279,7 +279,7 @@ a.nav__link:hover::after {
 #intro h4 {
     color: var(--white);
     font-family: "Poppins", sans-serif;
-    font-size: 50px;
+    font-size: 45px;
     padding: 0rem 210px 0rem; 
     font-weight: 600px;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
@@ -337,7 +337,7 @@ a.nav__link:hover::after {
     font-family: 'Inter', sans-serif;
     line-height: 1.5;
     flex: 1;
-    padding: 3rem;
+    padding: 4rem;
 }
 
 .text-content p a {
