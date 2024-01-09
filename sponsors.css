@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
 
 :root{
@@ -306,6 +306,130 @@ Content portion of the page
   margin: 0 auto;
   width: 90%; 
   max-width: 800px; 
+}
+
+.pdf-frame-status{
+  display: none;
+  margin-top: 0px;
+}
+
+@media (max-width: 767px) {
+  .pdf-frame {
+      display: none; /* Hide the PDF frame on smaller screens */
+  }
+
+  .pdf-frame-status{
+    display: block;
+    padding: 2rem;
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    text-align: center;
+  }
+}
+
+/* Accordion Menu */
+
+.accordion {
+  display: grid;
+  align-content: center;
+  height: 95vh;
+}
+
+.accordion__container {
+  display: grid;
+  row-gap: 1.25rem;
+  padding: 2rem 2rem;
+  border-radius: .5rem;
+  /* box-shadow: 0 12px 32px rgba(51, 51, 51, 0.1); */
+  margin-top: 20px;
+}
+
+.accordion__title {
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  font-weight: 400;
+  margin-top: 0;
+  transition: .2s;
+  font-weight: 500;
+}
+
+.accordion__header {
+  display: flex;
+  column-gap: .5rem;
+  padding: 1.25rem 1.25rem 1.25rem 1rem;
+  cursor: pointer;
+}
+
+.accordion__description {
+  padding: 0 1.25rem 1.25rem 3rem;
+  font-size: 15px;
+  color: white;
+}
+
+.accordion__item {
+  box-shadow: 0 2px 6px rgba(38, 38, 38, 0.1);
+  border-radius: .25rem;
+  position: relative;
+  transition: all .25s ease;
+  /* width: 450px; */
+}
+
+.accordion__item::after {
+  content: '';
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: .25rem 0 0 .25rem;
+}
+
+.accordion__item:nth-child(1),
+.accordion__item:nth-child(2),
+.accordion__item:nth-child(3),
+.accordion__item:nth-child(4),
+.accordion__item:nth-child(5),
+.accordion__item:nth-child(6) {
+  /* background: linear-gradient(to right, #5e011c, #ab0534); */
+  background-image: -webkit-linear-gradient(right, #ab0534, #8a0027);
+}
+
+.accordion__item:nth-child(1)::after {
+  background-color: var(--secondary-color);
+}
+
+.accordion__item:nth-child(2)::after {
+  background-color: var(--secondary-color);
+}
+
+.accordion__item:nth-child(3)::after {
+  background-color: var(--secondary-color);
+}
+
+.accordion__item:nth-child(4)::after {
+  background-color: var(--secondary-color);
+}
+
+.accordion__item:nth-child(5)::after {
+  background-color: var(--secondary-color);
+}
+
+.accordion__item:nth-child(6)::after {
+  background-color: var(--secondary-color);
+}
+
+.accordion__content {
+  overflow: hidden;
+  height: 0;
+  transition: all .25s ease;
+}
+
+/*Rotate icon and add font weight to titles*/
+
+.accordion-open .accordion__title {
+  font-weight: 700;
 }
 
 .button-container{
