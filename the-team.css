@@ -1,16 +1,14 @@
 /* CSS FOR TEAM PAGE */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 :root{
     /* colors */
     --primary-color: #ab0534;
     --primary-color-dark:  #5e011c;
     --secondary-color: #F3B61F;
-    --seconday-color-dark: #c79304;
+    --secondary-color-dark: #c79304;
     --text-dark:  #1B2021;
     --text-light: #676767;
     --white: #ffffff;
@@ -81,6 +79,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 500;
 }
 
 /* JAG Racing Logo*/
@@ -127,6 +126,7 @@ a {
     opacity: 0;
     transition: top 0.4s, opacity 0.3s;
     z-index: 10;
+    font-weight: 500;
   }
   .nav__menu::-webkit-scrollbar-thumb {
     background-color: hsl(220, 12%, 70%);
@@ -174,6 +174,7 @@ button.nav__link  {
     font-family: "Poppins", "sans-serif";
     font-size: 1rem;
     border: none;
+    font-weight: 500;
 }
 
 /* Contact Us Button Hover Effect */
@@ -344,17 +345,17 @@ a.nav__link:hover::after {
 }
 
 /* Team Details */
-
 .team-info{
-  background: #f3b71f;
+  /* background: #f3b71f; */
   position: relative;
   width: 100%;
   height: 400vh;
   padding: 3.5rem;
+  margin-top: calc(80rem-10px);
 }
 
 .titles{
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-family: 'Inter', sans-serif;
   margin-left: 10px;
   font-size: 30px;
@@ -372,15 +373,17 @@ a.nav__link:hover::after {
 
 .title-container span {
   background-color: var(--primary-color);
-  border-radius: 50%;
+  border-radius: 50%; 
   width: 50px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; 
+  overflow: hidden;
   margin-top: 25px;
   color: var(--secondary-color);
+  aspect-ratio: 1 / 1; /* Modern browsers support this */
+  max-width: 50px;
 }
 
 section#cad-section h3::after{
@@ -398,4 +401,186 @@ section p{
   margin-top: 1rem;
   font-family:'Inter', sans-serif;
   font-size: 20px;
+}
+
+/* Footer */
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: #121313;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer p{
+font-family: 'Inter', sans-serif;
+font-size: 17px;
+}
+
+footer .container{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+flex-direction: row;
+width: 100%;
+}
+
+footer .container .sect-aboutUs {
+  margin-right: 30px;
+  width: 40%;
+}
+
+footer h2{
+position: relative;
+color: white;
+font-weight: 500;
+margin-bottom: 15px;
+margin-top: 20px;
+font-family: 'Inter', sans-serif;
+}
+
+footer h2:before{
+content: "";
+position: absolute;
+bottom: -5px;
+left: 0;
+width: 50px;
+height: 2px;
+background: #ab0534;
+}
+
+footer .container .sect-aboutUs p{
+color: #999;
+}
+
+.quick-links h2{
+position: relative;
+width: 100%;
+}
+
+.quick-links ul li{
+list-style-type: none;
+}
+
+.quick-links ul li a{
+color: #999;
+text-decoration: none;
+margin-bottom: 10px;
+display: inline-block;
+}
+
+
+.quick-links ul li a:hover{
+color: white;
+}
+
+footer .container .sect-aboutUs,
+footer .container .contact{
+width: calc(35% - 60px);
+margin-right: 0 !important;
+
+}
+
+.contact .info{
+position: relative;
+}
+
+.contact .info li{
+display: flex;
+margin-bottom: 20px;
+}
+
+.sect-contactUs span{
+color: white;
+font-size: 20px;
+}
+
+.sect-contactUs li span{
+color: white;
+}
+
+.sect-contactUs li{
+color: #999;
+text-decoration: none;
+margin-bottom: 20px;
+}
+
+.sect-contactUs li a{
+color: #999;
+text-decoration: none;
+}
+
+.sect-contactUs li a:hover{
+color: #fff;
+}
+
+.copyright-text{
+width: 100%;
+  background: #ab0534;
+  padding: 8px 40px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+}
+
+@media (max-width: 991px){
+footer{
+  padding: 40px;
+}
+
+footer .container{
+  flex-direction: column;
+}
+
+footer div.sect-contactUs ul.info{
+  margin-right: 0;
+  margin-bottom: 25px;
+}
+
+footer .container .sect-aboutUs{
+  width: 100%;
+}
+
+.copyright-text{
+  width: 100%;
+  background: #ab0534;
+  padding: 8px 40px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+}
+
+.quick-links h2{
+  width: 100%;
+}
+}
+
+section#project-management-section.titles{
+  margin-bottom: 45px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+    flex-direction: column;
+  }
 }

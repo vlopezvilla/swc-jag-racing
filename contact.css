@@ -1,14 +1,14 @@
 /* CSS FOR CONTACT PAGE */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 :root{
     /* colors */
     --primary-color: #ab0534;
     --primary-color-dark:  #5e011c;
     --secondary-color: #f0b312;
-    --seconday-color-dark: #c79304;
+    --secondary-color-dark: #c79304;
     --text-dark: #000000;
     --text-light: #676767;
     --text-ultra-light: #b3b3b3; 
@@ -82,13 +82,14 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 500;
 }
 
 /* JAG Racing Logo*/
 .logo img {
-    width: 100%; 
-    height: auto; 
-    max-width: 60%;
+  width: 230px; 
+  height: auto; 
+  max-width: 250px; 
   }
 
 /* Hamurger Menu Icon */
@@ -128,6 +129,7 @@ a {
     opacity: 0;
     transition: top 0.4s, opacity 0.3s;
     z-index: 10;
+    font-weight: 500;
   }
   .nav__menu::-webkit-scrollbar-thumb {
     background-color: hsl(220, 12%, 70%);
@@ -438,9 +440,9 @@ a.nav__link:hover::after {
 
 .info h3{
   color: var(--body-text);
-  padding-bottom: 1rem;
+  padding-bottom: 0.35rem;
   font-family: 'Poppins', sans-serif;
-  font-size: 22px;
+  font-size: 25px;
 }
 
 .info .infoBox div{
@@ -449,7 +451,7 @@ a.nav__link:hover::after {
   margin-bottom: 10px;
 }
 
-.info .infoBox div span{
+.contact-form .info .infoBox div span{
   min-width: 40px;
   height: 40px;
   color: var(--secondary-color);
@@ -460,6 +462,19 @@ a.nav__link:hover::after {
   font-size: 1.5rem;
   border-radius: 50%;
   margin-right: 15px;
+}
+
+.info .infoBox div span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  margin-right: 15px;
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  min-width: 40px;
+  height: 40px;
 }
 
 .info .infoBox div p{
@@ -521,5 +536,163 @@ a.nav__link:hover::after {
 
   .contact-info{
     padding: 30px;
+  }
+}
+
+/* Footer */
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #121313;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+footer p{
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+}
+
+footer .container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+}
+
+footer .container .sect-aboutUs {
+    margin-right: 30px;
+    width: 40%;
+}
+
+footer h2{
+  position: relative;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+footer h2:before{
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #ab0534;
+}
+
+footer .container .sect-aboutUs p{
+  color: #999;
+}
+
+.quick-links h2{
+  position: relative;
+  width: 100%;
+}
+
+.quick-links ul li{
+  list-style-type: none;
+}
+
+.quick-links ul li a{
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+
+.quick-links ul li a:hover{
+  color: white;
+}
+
+footer .container .sect-aboutUs,
+footer .container .contact{
+  width: calc(35% - 60px);
+  margin-right: 0 !important;
+}
+
+.contact .info{
+  position: relative;
+  
+}
+
+.contact .info li{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.sect-contactUs span{
+  color: white;
+  font-size: 20px;
+}
+
+.sect-contactUs li span{
+  color: white;
+  background: #121313;
+}
+
+.sect-contactUs li{
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.sect-contactUs li a{
+  color: #999;
+  text-decoration: none;
+}
+
+.sect-contactUs li a:hover{
+  color: #fff;
+}
+
+.copyright-text{
+  width: 100%;
+    background: #ab0534;
+    padding: 8px 40px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+
+@media (max-width: 991px){
+  footer{
+    padding: 40px;
+  }
+
+  footer .container{
+    flex-direction: column;
+  }
+
+  footer div.sect-contactUs ul.info{
+    margin-right: 0;
+    margin-bottom: 25px;
+    background: #121313;
+  }
+
+  footer .container .sect-aboutUs{
+    width: 100%;
+  }
+
+  .copyright-text{
+    width: 100%;
+    background: #ab0534;
+    padding: 8px 40px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+  }
+
+  .quick-links h2{
+    width: 100%;
   }
 }

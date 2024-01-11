@@ -31,22 +31,18 @@ HOME PAGE
       }
   }
 
-@media screen and (max-width: 650px)
-{
-  #intro p{
-    padding: 0rem 1em 0rem 0rem;
-    font-size: 24px;
-  }
-}
-
 @media screen and (max-width: 1100px)
 {
 
   #intro h4
   {
     position: relative;
-    font-size: 42px;
+    font-size: 50px;
     padding: 0rem 25px 0rem;
+  }
+
+  #intro p{
+    padding: 0rem 3rem 0rem;
   }
 
   .hamburger {
