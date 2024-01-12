@@ -266,6 +266,19 @@ a.nav__link:hover::after {
   }
 }
 
+.logo img {
+  width: 230px;
+  height: auto;
+  max-width: 250px;
+}
+
+/* Media query for smaller screens, replace the image source */
+@media screen and (max-width: 480px) {
+  .logo img {
+    content: url('assets/JAG-Logo\ \(1\).png'); /* Replace 'path/to/logo-mobile.png' with the actual path to your mobile logo */
+  }
+}
+
 /* These edits are temporary 
   will be changed  */
 
