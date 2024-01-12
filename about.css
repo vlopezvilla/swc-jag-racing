@@ -255,20 +255,70 @@ a.nav__link:hover::after {
   }
 
 }
+
 @media screen and (min-width: 1152px) {
   .container {
     margin-inline: auto;
   }
 
-  
-  
   .navigation input:checked ~.nav__links{
     right: 0px;
   }
+}
+
+/* These edits are temporary 
+  will be changed  */
+
+  #intro {
+    /* Setting the image */
+    background-image: url('assets/math-sci-swc-building.jpeg');
+    width: 100%;
+    height: 65vh;
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right; 
+}
+
+#intro h4 {
+  color: var(--white);
+  font-family: "Poppins", sans-serif;
+  font-size: 60px;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+.headerBaja h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 45px;
+}
+
+.headerBaja h1::after {
+  content: "";
+  display: block;
+  width: 150px; 
+  height: 2px; 
+  background-color: var(--primary-color);
+  margin: 10px auto; 
+}
+
+
+.info_baja p {
+  color: var(--text-dark);
+  font-size: 17px; 
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  padding: 1.5rem 3.5rem 0rem;
+}
 
   /* aboutInfo */
-
-.headerBaja{
+/* .headerBaja{
   width:90%;
   display: flex;
   justify-content: center;
@@ -293,7 +343,7 @@ a.nav__link:hover::after {
 }
 
 /* About Jag Racing */
-.info_baja{
+/* .info_baja{
   width: 90%;
   margin:0 auto;
   padding:10px 20px;
@@ -305,16 +355,16 @@ a.nav__link:hover::after {
   flex-wrap: wrap;
 }
 /* initial description */
-.container p{
+/* .container p{
   font-size: 14.5px;
-  color: #00000;
+  color: black;
   margin-bottom: 32px;
   align-items: center;
   text-align: center;
   
-}
+} */ 
 /* img block with text */
-.baja_img{
+/* .baja_img{
   flex:1;
   margin-right: 40px;
   overflow: hidden;
@@ -330,8 +380,8 @@ a.nav__link:hover::after {
 }
 .subheader h2{
   font-size: 24px;
-  margin-bottom 0px;
-  color: #00000;
+  margin-bottom: 0px;
+  color: black;
 }
 .jag_info{
   flex: 1;
@@ -339,14 +389,14 @@ a.nav__link:hover::after {
 .jag_info p{
   font-size: 15px;
   line-height: 1.5;
-  color: #00000;
+  color: black;
   align-items: center;
   text-align: left;
-}
+} */
 
 /*About Car/ Early Model pdf*/
 
-.info_car{
+/* .info_car{
   width: 90%;
   margin:0 auto;
   padding:10px 20px;
@@ -363,8 +413,8 @@ a.nav__link:hover::after {
 .car_header h3{
   margin-top: 18px;
   font-size: 28px;
-  margin-bottom 18px;
-  color: #00000;
+  margin-bottom: 18px;
+  color: black;
   align-items: center;
   text-align: center;
 }
@@ -385,7 +435,7 @@ a.nav__link:hover::after {
 .info_car p{
   margin-top: 12px;
   font-size: 14.5px;
-  color: #00000;
+  color: black;
   margin-bottom: 24px;
   align-items: center;
   text-align: center;
@@ -396,17 +446,162 @@ a.nav__link:hover::after {
   padding: 2rem;
   border: none;
   margin: 10px auto;
-}
+} */
 
+
+/* Footer */
 footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: #121313;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+footer p{
+font-family: 'Inter', sans-serif;
+font-size: 19px;
+line-height: 1.7rem;
+}
+
+footer .container{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+flex-direction: row;
+width: 100%;
+}
+
+footer .container .sect-aboutUs {
+  margin-right: 30px;
+  width: 40%;
+}
+
+footer h2{
+position: relative;
+color: white;
+font-weight: 500;
+margin-bottom: 25px;
+margin-top: 40px;
+font-family: 'Inter', sans-serif;
+}
+
+footer h2:before{
+content: "";
+position: absolute;
+bottom: -5px;
+left: 0;
+width: 50px;
+height: 2px;
+background: #ab0534;
+}
+
+footer .container .sect-aboutUs p{
+color: #999;
+}
+
+.quick-links h2{
+position: relative;
+width: 100%;
+}
+
+.quick-links ul li{
+list-style-type: none;
+}
+
+.quick-links ul li a{
+color: #999;
+text-decoration: none;
+margin-bottom: 10px;
+display: inline-block;
+}
+
+
+.quick-links ul li a:hover{
+color: white;
+}
+
+footer .container .sect-aboutUs,
+footer .container .contact{
+width: calc(35% - 60px);
+margin-right: 0 !important;
+
+}
+
+.contact .info{
+position: relative;
+}
+
+.contact .info li{
+display: flex;
+margin-bottom: 20px;
+}
+
+.sect-contactUs span{
+color: white;
+font-size: 20px;
+}
+
+.sect-contactUs li span{
+color: white;
+}
+
+.sect-contactUs li{
+color: #999;
+text-decoration: none;
+margin-bottom: 20px;
+}
+
+.sect-contactUs li a{
+color: #999;
+text-decoration: none;
+}
+
+.sect-contactUs li a:hover{
+color: #fff;
+}
+
+.copyright-text{
+width: 100%;
+  background: #ab0534;
+  padding: 8px 40px;
   text-align: center;
-  padding: 20px; /* Adjust the padding as needed */
-  background-color: #f0f0f0; 
-  font-size: var(--body-text)
+  color: white;
+  font-weight: 600;
 }
 
-footer p {
-  margin: 0;
-}
+@media (max-width: 991px){
+footer{
+  padding: 40px;
 }
 
+footer .container{
+  flex-direction: column;
+}
+
+footer div.sect-contactUs ul.info{
+  margin-right: 0;
+  margin-bottom: 25px;
+}
+
+footer .container .sect-aboutUs{
+  width: 100%;
+}
+
+.copyright-text{
+  width: 100%;
+  background: #ab0534;
+  padding: 8px 40px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+}
+
+.quick-links h2{
+  width: 100%;
+}
+}
