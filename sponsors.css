@@ -355,6 +355,7 @@ Content portion of the page
   margin-top: 0;
   transition: .2s;
   font-weight: 500;
+  margin-left: 15px;
 }
 
 .accordion__header {
