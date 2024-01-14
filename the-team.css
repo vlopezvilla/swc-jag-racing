@@ -148,19 +148,20 @@ a {
 }
 
 /* Nav Bar Links */
-.nav__link {
+ul li a.nav__link {
   color: var(--text-dark);
   padding: 1.25rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: background-color 0.3s;
   text-decoration: none;
+  position: relative;
+  overflow: hidden; /* Add this line to hide overflow on pseudo-element */ /* Grey border above each link */
 }
 
 /* Side menu links hover effect*/
 .nav__link:hover {
-  background-color: var(--secondary-color);
+  background-image: -webkit-linear-gradient(right, #ffd04e, #ff9661);
 }
 
 /* Contact Us Button */
@@ -180,6 +181,7 @@ button.nav__link  {
 /* Contact Us Button Hover Effect */
 button.nav__link:hover  {
   background-color: var(--primary-color-dark); 
+  background-image: none;
 }
 
 a.nav__link {
