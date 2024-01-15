@@ -163,7 +163,7 @@ a {
 
 /* Side menu links hover effect*/
 .nav__link:hover {
-  background-image: -webkit-linear-gradient(right, #ffd04e, #ff9661);
+  background-color: var(--secondary-color);
 }
 
 /* Contact Us Button */
@@ -183,7 +183,6 @@ button.nav__link  {
 /* Contact Us Button Hover Effect */
 button.nav__link:hover  {
   background-color: var(--primary-color-dark); 
-  background-image: none;
 }
 
 a.nav__link {
