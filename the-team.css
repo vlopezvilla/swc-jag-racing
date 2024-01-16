@@ -441,6 +441,37 @@ flex-direction: row;
 width: 100%;
 }
 
+.ext-links{
+  margin-top: 20px;
+  display: flex;
+}
+
+.ext-links li{
+  list-style: none;
+}
+
+.ext-links li a{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.ext-links li a:hover{
+  background-color: #ab0534;
+}
+
+ion-icon[name="logo-linkedin"] {
+  color: white;
+  font-size: 20px; 
+}
+
 footer .container .sect-aboutUs {
   margin-right: 30px;
   width: 40%;
