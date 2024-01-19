@@ -335,7 +335,8 @@ a.nav__link:hover::after {
     display: flex;
     align-items: center;
     justify-content: center; /* Center both elements horizontally */
-}
+    flex-direction: column;
+  }
 
 .sae-picture {
     width: 300px;
@@ -485,8 +486,8 @@ footer h2:before{
 
 .ext-links li a{
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background: #222;
   display: flex;
   justify-content: center;
@@ -502,7 +503,7 @@ footer h2:before{
 
 ion-icon[name="logo-linkedin"] {
   color: white;
-  font-size: 20px; 
+  font-size: 30px; 
 }
 
 footer .container .sect-aboutUs p{

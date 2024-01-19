@@ -500,8 +500,8 @@ width: 100%;
 
 .ext-links li a{
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background: #222;
   display: flex;
   justify-content: center;
@@ -517,7 +517,7 @@ width: 100%;
 
 ion-icon[name="logo-linkedin"] {
   color: white;
-  font-size: 20px; 
+  font-size: 30px; 
 }
 
 footer .container .sect-aboutUs {
